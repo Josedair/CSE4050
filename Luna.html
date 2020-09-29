@@ -18,7 +18,7 @@ td, th {
 	   }
 body {
 	background-color: #6666ff;
-	background-image: url("/CSE4050/images/dottedBG.png");
+	background-image: url("images/dottedBG.png");
 	background-attachment: fixed;
 }  
 	   
@@ -58,7 +58,34 @@ a:hover, a:active {
 	color:#ff9999;
 	background-color: #6666ff;
   }
+  
+  input[type=button]{
+	background-color: #99ff99;
+	border: 2px solid #6666ff  ;
+	color: #ff9999;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin: 1px 1px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight:bold;
+  }
+  
+  input:hover, input:active{
+	color: #99ff99;
+	background-color: #ff9999;
+	font-size: 1.1rem;
+  }
+  
 </style>
+
+<script>
+	function goBack(){
+		window.history.back();
+	}
+</script>
+
 </head>
 
 <body>
@@ -74,14 +101,13 @@ a:hover, a:active {
 	<th><h2 style = "text-align:center";>Baby</h2></th>
   </tr>
   <tr>
-    <td align="center" valign="center"><img src = "\CSE4050\images\Luna4.jpg" alt= "Luna1" style="width:400px;height:400px;"></td>
-    <td align="center" valign="center"><img src = "\CSE4050\images\Luna2.jpg" alt= "Luna2" style="width:300px;height:400px;"></td>
-    <td align="center" valign="center"><img src = "\CSE4050\images\Luna3.jpg" alt= "Luna3" style="width:350px;height:300px;"></td>
-	<td align="center" valign="center"><img src = "\CSE4050\images\Luna1.jpg" alt= "Luna4" style="width:300px;height:400px;"></td>
+    <td align="center" valign="center"><img src = "images\Luna4.jpg" alt= "Luna1" style="width:400px;height:400px;"></td>
+    <td align="center" valign="center"><img src = "images\Luna2.jpg" alt= "Luna2" style="width:300px;height:400px;"></td>
+    <td align="center" valign="center"><img src = "images\Luna3.jpg" alt= "Luna3" style="width:350px;height:300px;"></td>
+	<td align="center" valign="center"><img src = "images\Luna1.jpg" alt= "Luna4" style="width:300px;height:400px;"></td>
   </tr>
 </table>
 
-<a href = "\CSE4050\index.html"> Home </a>
-
+ <input type ="button" value ="Home" onclick ="goBack()">
 </body>
 </html>
