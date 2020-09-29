@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Chapo</title>
+
+<style>
+table {
+		font-family: arial, sans-serif;
+		<!-- border-collapse: collapse; -->
+		width: 100%;
+	  }
+
+td, th {
+		 <!-- border: 1px solid #dddddd; -->
+  
+		 padding: 5px;
+	   }
+body {
+	background-color: #6666ff;
+	background-image: url("images/dottedBG.png");
+	background-attachment: fixed;
+}  
+	   
+a:link{
+ 
+	color:#ff9999;
+	text-decoration: none;
+	background-color: #6666ff;
+
+}
+a:visited{
+ 
+	text-decoration: none;
+	color: #ff9999;
+
+}
+
+a:hover, a:active {
+
+	color: #ff8080;
+	text-decoration: underline dashed;
+	text-decoration-color: #99ff99;
+
+  }
+  hr {
+	
+	border: 2px solid #99ff99
+	
+  }
+  
+  h1{
+	font-size: 3.5em;
+	color:#ff9999;
+	background-color: #6666ff;
+  }
+  h2{
+		color:#ff9999;
+		background-color: #6666ff;
+  }
+  
+   input[type=button]{
+	background-color: #99ff99;
+	border: 2px solid #6666ff  ;
+	color: #ff9999;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin: auto;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight:bold;
+  }
+  
+  input:hover, input:active{
+	color: #99ff99;
+	background-color: #ff9999;
+	font-size: 1.1rem;
+	border: 2px solid #6666ff; 
+  }
+  
+  div {
+  width:300px;
+  padding: 5px;
+  margin: auto;
+  outline: dashed #ff9999;
+  text-align: center;
+  overflow: auto;
+}
+</style>
+
+<script>
+	function goBack(){
+		window.history.back();
+	}
+	
+	var imgArr = [
+					"Chapo1.jpg","Chapo2.jpg", "Chapo3.jpg", 
+					"Chapo4.jpg", "Chapo5.jpg", "Chapo6.jpg", "Chapo7.jpg", 
+					"Chapo8.jpg", "Chapo9.jpg", "Chapo10.jpg"
+				  ];
+				  
+	function displayImg(){
+		var num = Math.floor(Math.random() * (imgArr.length));
+		var filePath = "images\\";
+		var arrElement = imgArr[num];
+		var imgSrc = filePath.concat(arrElement);
+		document.canvas.src= "images\\" + imgArr[num];
+		console.log(imgSrc);
+	}
+</script>
+</head>
+
+<body>
+<h1 style="text-align:center" ;=""> Chapo </h1>
+
+<hr>
+
+<table style="width:100%; ">
+  <tbody><tr>
+    <th><h2 style="text-align:center" ;="">Elegant</h2></th>
+    <th><h2 style="text-align:center" ;="">Stylish</h2></th>
+    <th><h2 style="text-align:center" ;="">Polite</h2> </th>
+	<th><h2 style="text-align:center" ;="">Crackhead</h2></th>
+  </tr>
+  <tr>
+    <td valign="center" align="center"><img src="images/Chapo1.jpg" alt="chapo1" style="width:350px;height:300px;"></td>
+    <td valign="center" align="center"><img src="images/Chapo2.jpg" alt="chapo2" style="width:300px;height:400px;"></td>
+    <td valign="center" align="center"><img src="images/Chapo3.jpg" alt="chapo3" style="width:350px;height:300px;"></td>
+	<td valign="center" align="center"><img src="images/Chapo4.jpg" alt="chapo4" style="width:300px;height:400px;"></td>
+  </tr>
+</tbody></table>
+<hr>
+
+  <input type ="button" value ="Home" onclick ="goBack()">
+ <div>
+	<img src="images/Chapo2.jpg" name="canvas" style="width:200px">
+	<input type="button" onclick="displayImg()" value="Random Pic">
+</div>
+
+
+
+</body></html>
